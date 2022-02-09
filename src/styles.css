@@ -1,0 +1,59 @@
+body {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  background-color: #f9f7fe;
+}
+.weather_app_wrapper {
+  border: 1px solid #f9f7fe;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 10px;
+  margin: 50px auto;
+  max-width: 600px;
+}
+.weather_app_inner {
+  padding: 20px;
+  background-color: white;
+}
+h1 {
+  font-size: 38px;
+  font-weight: bolder;
+}
+h5 {
+  font-size: 15px;
+  color: rgba(39, 33, 66, 0.4);
+  padding-right: 5px;
+}
+h5::first-letter,
+h1::first-letter {
+  text-transform: capitalize;
+}
+span {
+  color: #f65282;
+}
+h1#temp {
+  font-size: 80px;
+  font-weight: 900;
+}
+h1 small {
+  font-weight: 100;
+  font-size: 40px;
+  position: relative;
+  top: -30px;
+}
+#tempday {
+  font-size: 18px;
+  margin-left: 10px;
+}
+#tempNight {
+  color: #f65282;
+  opacity: 0.6;
+  font-size: 18px;
+  margin-left: 10px;
+}
+#days small,#days small{
+    font-size: 20px;
+    margin-left: 2px;
+     color: #f65282;
+}
+#dialy{
+    margin-top: 30px;
+}
