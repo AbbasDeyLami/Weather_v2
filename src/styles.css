@@ -5,22 +5,52 @@ body {
 .weather_app_wrapper {
   border: 1px solid #f9f7fe;
   box-sizing: border-box;
-  box-shadow: 0 0 10px 10px;
+box-shadow:0 30px 50px rgb(65 50 100 / 8%);
   margin: 50px auto;
-  max-width: 600px;
+  max-width: 750px;
+  border-radius: 20px;
 }
 .weather_app_inner {
-  padding: 20px;
+  padding: 40px 30px;
   background-color: white;
+    border-radius: 20px;
 }
 h1 {
   font-size: 38px;
   font-weight: bolder;
+  margin: 20px 0 10px ;
 }
 h5 {
   font-size: 15px;
   color: rgba(39, 33, 66, 0.4);
   padding-right: 5px;
+}
+form{
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+.input-search{
+    background: #f9f7fe;
+    border: none;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 6px;
+    color: rgba(39,33,66,.4);
+    font-size: 16px;
+    height: 50px;
+    line-height: 20px;
+    width: 99%;
+    outline: none;
+}
+.submit{
+ background: #885df1;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
 }
 h5::first-letter,
 h1::first-letter {
@@ -35,9 +65,9 @@ h1#temp {
 }
 h1 small {
   font-weight: 100;
-  font-size: 40px;
+  font-size: 27px;
   position: relative;
-  top: -30px;
+  top: -35px;
 }
 #tempday {
   font-size: 18px;
@@ -49,11 +79,38 @@ h1 small {
   font-size: 18px;
   margin-left: 10px;
 }
-#days small,#days small{
-    font-size: 20px;
-    margin-left: 2px;
-     color: #f65282;
+#tempNight small,
+#days small {
+  font-size: 20px;
+  margin-left: 2px;
+  color: #f65282;
+  font-weight: bold;
 }
-#dialy{
-    margin-top: 30px;
+#dialy {
+  margin-top: 30px;
+}
+.finally {
+  font-size: 14px;
+  margin-top: 40px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+}
+.finally a {
+  color: #885df1;
+  text-decoration: none;
+}
+
+.cityCol{
+    margin-top: 5px;
+}
+.HuWi small{color:#f65282}
+
+hr{
+  color: #e0d4ff;
+}
+#CelToFe a{
+  text-decoration: none;
+  font-size: 15px;
+  padding: 0 5px;
 }

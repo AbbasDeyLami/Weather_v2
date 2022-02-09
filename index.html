@@ -1,89 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
 
-    <title>Weather App Version 2</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="weather_app_wrapper">
-        <div class="weather_app_inner">
-          <div class="logo"></div>
-          <form action="">
-            <input type="search" name="" id="" />
-            <input type="submit" value="search" />
-          </form>
-          <hr />
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <title>Weather App Version 2</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather_app_wrapper">
+      <div class="weather_app_inner">
+        <div class="logo"><img src="./src/logoipsum-logo-33.svg" alt="logo"></div>
+        <form id="search-form" action="">
           <div class="row">
-            <div class="col-6">
-              <h1 id="city">New Your</h1>
-              <div class="d-flex">
-                <h5 id="date">Wednesday 21:56</h5>
-                <h5 id="description">clear sky</h5>
-              </div>
-              <div class="d-flex">
+            <div class="col-9">
+              <input class="input-search" type="search" name="" id="search-city" placeholder="Search..." />
+            </div>
+            <div class="col-3">
+              <input class="submit" type="submit" id="button-search" value="search" />
+            </div>
+          </div>
+        </form>
+        <hr />
+        <div class="row align-items-center">
+          <div class="col-6 cityCol">
+            <h1 id="city"></h1>
+            <div class="d-flex">
+              <h5 id="date"></h5>
+              <h5 id="description"></h5>
+            </div>
+            <div class="d-flex">
+             <div class="HuWi">
                 <h5 id="Humidity">Humidity:
-                <span id="HumidityDigit">45<small>%</small></span>,
-                                <h5 id="wind">wind:
-                <span id="windDigit">4.63<small>km/h</small></span>
+                <span id="HumidityDigit"></span>
+                <small>%</small>,
+              </div>
+<div class="HuWi">            
+      <h5 id="wind">wind:
+                  <span id="windDigit"></span>
+                  <small>km/h</small>
 
-                </h5>
-              </div>
+                </h5></div>
             </div>
-            <div class="col-6">
+          </div>
+          <div class="col-6 cityCol">
+            <div class="d-flex float-end">
+              <img id="icon" src="" alt="">
               <div class="d-flex">
-                <img src="" alt="">
-                <h1 id="temp">6<small>℃</small></h1>
+                <h1 id="temp">6</h1>
+               <div id="CelToFe"> <a id="cel-link" href="">℃</a> | <a id="far-link" href="http://">°F</a></div>
               </div>
             </div>
           </div>
-          <div id="dialy" class="d-flex justify-content-between text-center">
-            <div class="day1">
-                        <h5>Wed</h5>
-          <h5><img src="" alt=""></h5>
-          <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
-            </div>
-            <div class="day2">
-                        <h5>Wed</h5>
-          <h5><img src="" alt=""></h5>
-          <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
-            </div>
-            <div class="day3">
-                        <h5>Wed</h5>
-          <h5><img src="" alt=""></h5>
-          <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
-            </div>
-            <div class="day4">          <h5>Wed</h5>
-          <h5><img src="" alt=""></h5>
-          <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5></div>
-            <div class="day5">
-                        <h5>Wed</h5>
-          <h5><img src="" alt=""></h5>
-          <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
-            </div>
+        </div>
+        <div id="dialy" class="d-flex justify-content-between text-center">
+          <div class="day1">
+            <h5>Wed</h5>
+            <h5><img src="" alt=""></h5>
+            <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
           </div>
-          <hr>
-          <div class="finally">
-            This project was coded by <a href="#">Abbas </a> and is <a href="https://github.com/AbbasDeyLami/Weather_v2">open-sourced on GitHub</a>  and hosted on Netlify
+          <div class="day2">
+            <h5>Wed</h5>
+            <h5><img src="" alt=""></h5>
+            <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
           </div>
+          <div class="day3">
+            <h5>Wed</h5>
+            <h5><img src="" alt=""></h5>
+            <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
+          </div>
+          <div class="day4">
+            <h5>Wed</h5>
+            <h5><img src="" alt=""></h5>
+            <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
+          </div>
+          <div class="day5">
+            <h5>Wed</h5>
+            <h5><img src="" alt=""></h5>
+            <h5 id="days"><span id="tempday">6</span><small>°</small><span id="tempNight">0</span><small>°</small></h5>
+          </div>
+        </div>
+        <hr>
+        <div class="finally">
+          This project was coded by <a href="#">Abbas </a> and is <a
+            href="https://github.com/AbbasDeyLami/Weather_v2">open-sourced on GitHub</a> and <a
+            href="https://lucid-pike-034f66.netlify.app">hosted on Netlify</a>
         </div>
       </div>
     </div>
-    <script
-      src="src/index.js"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    >
+  </div>
+  <script src="src/index.js" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
 
 
       // write your code here
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
